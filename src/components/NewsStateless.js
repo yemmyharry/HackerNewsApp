@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const DEFAULT_QUERY = "redux";
+
 const PATH_BASE = "https://hn.algolia.com/api/v1";
 const PATH_SEARCH = "/search";
 const PARAM_SEARCH = "query=";
@@ -47,7 +47,7 @@ const NewsApp = () => {
 
   useEffect(()=>{
     fetchFrontStories()
-  },[])
+  },[searchTerm])
 
     return (
       <div>
