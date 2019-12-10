@@ -13,7 +13,7 @@ const NewsApp = () => {
 
   const setSearchTopstories = result => {
     setResult(result);
-    // setIsLoading(false);
+    setIsLoading(false);
   };
 
   const onSearchChange = (e) => {
@@ -21,7 +21,7 @@ const NewsApp = () => {
   };
 
    const fetchFrontStories = () => {
-     setIsLoading(false)
+     setIsLoading(true)
     fetch(frontPage)
     .then(response => response.json())
     .then(result => {
