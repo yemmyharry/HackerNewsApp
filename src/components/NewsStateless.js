@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 const PATH_BASE = "https://hn.algolia.com/api/v1";
 const PATH_SEARCH = "/search";
 const PARAM_SEARCH = "query=";
-const frontPage = "http://hn.algolia.com/api/v1/search_by_date?tags=story"
+
 
 const NewsApp = () => {
   const [result, setResult] = useState(null)
@@ -22,7 +22,7 @@ const NewsApp = () => {
 
    const fetchFrontStories = () => {
      setIsLoading(true)
-    fetch(frontPage)
+    fetch("http://hn.algolia.com/api/v1/search_by_date?tags=story")
     .then(response => response.json())
     .then(result => {
       return setSearchTopstories(result)
