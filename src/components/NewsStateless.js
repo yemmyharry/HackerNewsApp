@@ -19,7 +19,9 @@ const NewsApp = () => {
   const onSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
+
    const fetchFrontStories = () => {
+     setIsLoading(false)
     fetch(frontPage)
     .then(response => response.json())
     .then(result => {
