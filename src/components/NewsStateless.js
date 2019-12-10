@@ -13,7 +13,7 @@ const NewsApp = () => {
 
   const setSearchTopstories = result => {
     setResult(result);
-    setIsLoading(false);
+    // setIsLoading(false);
   };
 
   const onSearchChange = (e) => {
