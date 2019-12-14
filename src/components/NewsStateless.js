@@ -22,7 +22,7 @@ const NewsApp = () => {
 
    const fetchFrontStories = () => {
      setIsLoading(true)
-    fetch("http://hn.algolia.com/api/v1/search_by_date?tags=story")
+    fetch("https://hn.algolia.com/api/v1/search_by_date?tags=story")
     .then(response => response.json())
     .then(result => {
       return setSearchTopstories(result)
